@@ -1,2 +1,26 @@
-# vue_flw
-一个基于vue，vue-cli3， es6， webpack，scss的前端脚手架
+# demo4
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
