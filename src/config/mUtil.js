@@ -2,39 +2,17 @@
  * Created by lidonghua on 2018/4/4.
  */
 
-
-
 export const utils = {
-    pageLock: function () {
-        document.addEventListener("touchmove", utils.pageLockHandler, false)
+    lock: function () {
+        document.addEventListener("touchmove", utils.pageLockHandler, {capture: false, passive: false})
     },
-    pageUnlock: function () {
-        document.removeEventListener("touchmove", utils.pageLockHandler, false)
+    unlock: function () {
+        document.removeEventListener("touchmove", utils.pageLockHandler, {capture: false})
     },
     pageLockHandler: function (e) {
         e.preventDefault();
-    },
-    isInApp: function (type) {
-        var ua = navigator.userAgent.toLowerCase();
-        var isIos = ua.indexOf('ipad') > -1 || ua.indexOf('iphone') > -1 || false;
-        var isAndroid = ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1 || false;
-        var inWx = ua.indexOf('micromessenger') > -1 || false;
-        var inMqq = ua.indexOf("_sq_") > -1 || false;//QQ
-        var inJdApp = ua.indexOf('jdapp') > -1 || false;
-        var inJrApp = ua.indexOf('jdjr') > -1 || ua.indexOf('android-async-http') > -1 || false;
-        var inWyApp = ua.indexOf('WalletClient') > -1 || false;
-        var resultObj = {
-            iOS: isIos,
-            android: isAndroid,
-            wx: inWx,
-            mqq: inMqq,
-            jdAPP: inJdApp,
-            jrAPP: inJrApp,
-            wyApp: inWyApp
-        }
-        return resultObj[type]
     }
-}
+};
 
 /*
  * 获取随机字符串

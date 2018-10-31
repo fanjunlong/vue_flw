@@ -11,7 +11,7 @@ module.exports = {
         })
     },
     devServer: {
-        host: 'my.jr.jd.com',
+        // host: 'my.jr.jd.com',
         port: 80
     },
     assetsDir: './',
