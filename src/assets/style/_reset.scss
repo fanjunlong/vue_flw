@@ -9,29 +9,6 @@
 // http://necolas.github.io/normalize.css/
 //-----------------------------------------------------
 
-// 1. Prevent mobile text size adjust after orientation change, without disabling user zoom.
-// 2. Remove the gray background color from tap, default value is inherit
-html {
-    -ms-text-size-adjust: 100%; // 1
-    -webkit-text-size-adjust: 100%; // 1
-    -webkit-tap-highlight-color: transparent; // 2
-    height: 100%;
-}
-
-// 1. Remove default margin
-body {
-    margin: 0; // 1
-    font-size: $fontSize;
-    font-family: $fontFamily;
-    line-height: $fontLineHeight;
-    color: $colorText;
-    min-height: 100%;
-    padding-top: env(safe-area-inset-top); //为导航栏+状态栏的高度 88px
-    padding-left: env(safe-area-inset-left); //如果未竖屏时为0
-    padding-right: env(safe-area-inset-right); //如果未竖屏时为0
-    padding-bottom: env(safe-area-inset-bottom); //为底下圆弧的高度 34px
-}
-
 // HTML5 display definitions
 //-----------------------------------------------------
 
@@ -91,7 +68,7 @@ a {
     background: transparent; // 1
     -webkit-text-decoration-skip: objects; /* 2 */
     text-decoration: none;
-    color: nth($colorLink, 1);
+    color: nth(#08c, 1);
 
     &:active {
         outline: 0; // 3
@@ -354,24 +331,24 @@ input::-ms-reveal {
 // Firefox 19+
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-    color: $colorPlaceholder;
+    color: #999999;
 }
 
 // Internet Explorer 10+
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: $colorPlaceholder;
+    color: #999999;
 }
 
 // Safari and Chrome
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: $colorPlaceholder;
+    color: #999999;
 }
 
 // 如不支持placeholder添加class 或者 设置提示的placeholder
 .placeholder {
-    color: $colorPlaceholder;
+    color: #999999;
 }
 
 // Tables
@@ -427,11 +404,8 @@ i {
     font-style: normal;
 }
 
-// 所有元素为border-box
-@if $borderBoxSwitch {
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
 }
 
 

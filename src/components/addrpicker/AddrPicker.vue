@@ -17,15 +17,13 @@
                         </ul>
                     </div>
                 </div>
-                <div v-transfer-dom>
-                    <loading :show="showLoading" text="加载中"></loading>
-                </div>
+                <loading :show="showLoading" text="请稍等"></loading>
             </div>
         </popup>
     </div>
 </template>
 <script>
-    import {utils} from "../../config/mUtil";
+    import {utils} from "../../config/mUtils";
     import BScroll from 'better-scroll';
     import { Loading } from 'vux'
 
@@ -292,5 +290,5 @@
     }
 </script>
 <style type="text/scss" lang="scss">
-    @import "./addr-picker";
+    @import "addr-picker";
 </style>

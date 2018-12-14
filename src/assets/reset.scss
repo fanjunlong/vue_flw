@@ -1,30 +1,29 @@
 @charset "UTF-8";
-//-----------------------------------------------------
-// function scss
-// 提供所有的基础功能包括：变量设置，@media，基础mixin，animation
-// 默认不会解析出任何样式
-//-----------------------------------------------------
 
-
-// 导入所有功能类相关文件
-//-----------------------------------------------------
-@import "style/variables";
+@import "style/rem";
 @import "style/mixin";
 @import "style/reset";
-@import "style/rem";
+
 
 // 导入jrv common文件 主要是字体 margin padding相关
 @import "style/jrvcommon";
 
-//定义全局基本样式
 
-#app{
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
-    -webkit-overflow-scrolling: touch;
-    //min-height: 100vh;
+html {
+    -ms-text-size-adjust: 100%; // 1
+    -webkit-text-size-adjust: 100%; // 1
+    -webkit-tap-highlight-color: transparent; // 2
     height: 100%;
-    background: #FAFAFA;
-    >div{ position: absolute; height: 100%; width: 100%;}
+    width: 100%;
+}
+
+body {
+    margin: 0; padding: 0;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Microsoft YaHei UI", "Microsoft YaHei", Roboto, "Hiragino Sans GB",  "Source Han Sans CN", Fira Sans, "Droid Sans", "Helvetica Neue", arial, sans-serif;
+    height: 100%;
+    padding-top: env(safe-area-inset-top); //为导航栏+状态栏的高度 88px
+    padding-left: env(safe-area-inset-left); //如果未竖屏时为0
+    padding-right: env(safe-area-inset-right); //如果未竖屏时为0
+    padding-bottom: env(safe-area-inset-bottom); //为底下圆弧的高度 34px
 }
