@@ -155,7 +155,7 @@
     &::after {
         content: "";
         @include v-arrow;
-        color: $colorC;
+        color: #c0c0c0;
         position: absolute;
         right: 15px;
         top: 50%;

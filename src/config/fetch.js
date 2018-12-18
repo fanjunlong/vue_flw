@@ -11,6 +11,8 @@ var axiosIns = axios.create({ // 公共参数
 });
 
 axiosIns.interceptors.request.use(config => {
+    // console.log(config);
+    Vue.$vux.loading.show({ text: '图片上传中' });
     // loading  请求前的处理 比如说增加loading
     return config
 }, error => {

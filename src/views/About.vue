@@ -9,25 +9,25 @@
             </up-loader>
         </div>
         <div v-transfer-dom>
-            <jrvm-addr-picker v-model="addrShow"
-                              :chosen="addrPicker.chosen"
-                              :links="addrPicker.links"
-                              :formatParam="addrPicker.formatParam"
-                              :formatResult="addrPicker.formatResult"
-                              @on-choose="choose">
-            </jrvm-addr-picker>
+            <!--<jrvm-addr-picker v-model="addrShow"-->
+                              <!--:chosen="addrPicker.chosen"-->
+                              <!--:links="addrPicker.links"-->
+                              <!--:formatParam="addrPicker.formatParam"-->
+                              <!--:formatResult="addrPicker.formatResult"-->
+                              <!--@on-choose="choose">-->
+            <!--</jrvm-addr-picker>-->
         </div>
     </div>
 </template>
 
 <script>
     // @ is an alias to /src
-    import AddrPicker from '../components/addrPicker/AddrPicker'
+    // import AddrPicker from '../components/addrPicker/AddrPicker'
     import UpLoader from '../components/upLoader/UpLoader'
     export default {
         name: 'about',
         components: {
-            'jrvm-addr-picker': AddrPicker, UpLoader
+             UpLoader
         },
         data() {
             return {

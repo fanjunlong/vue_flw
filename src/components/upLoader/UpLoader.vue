@@ -58,8 +58,6 @@
                 })
             },
             async uploadReq(a, base64) {
-                this.showImg = false;
-                this.$vux.loading.show({ text: '图片上传中' });
                 let reqData = {
                     imageBase64:base64,
                     claimId: '123654231214'
@@ -67,7 +65,6 @@
                 let res = await this.API.uploadOnePicture(reqData);
                 this.imgUrl = res.path;
                 this.$emit('getUrl', this.imgUrl);
-                this.$vux.loading.hide();
             }
         }
     }
